@@ -43,7 +43,7 @@ $(document).ready(function(){
         }else {
           image_url = shot.image_url;
         }
-        html += '<div class="dribbble-portfolio--item col-4 col-lg-4">';
+        html += '<div class="dribbble-portfolio--item col-4 col-lg-4 col-md-6">';
         html += '<a href="' + shot.url + '" target="_blank">';
         html += '<img src="' + image_url + '"';
         html += 'alt="' + shot.title + '" class="img-thumbnail">';

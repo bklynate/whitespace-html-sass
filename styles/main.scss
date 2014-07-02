@@ -85,6 +85,19 @@ a.inverted {
     }
 }
 
+// Patterns
+
+
+section:not(.hero):not(.top-navigation) {
+    border-top: 2px solid $default-grey-color;
+    margin: 75px 0;
+    padding: 75px 0;
+}
+section > h2 {
+    margin-bottom: 75px;
+    text-align: center;
+}
+
 // Header
 // Navigation
 .top-navigation {
@@ -103,6 +116,9 @@ a.inverted {
     li {
         display: inline-block;
         margin-left: 50px;
+        &:first-child{
+          margin-left: 0;
+        }
         a {
             color: $default-grey-color;
             font-weight: bold;
@@ -126,17 +142,6 @@ a.inverted {
 .hero {
     margin-top: 80px;
     padding: 150px 0 75px 0;
-}
-
-section:not(.hero):not(.top-navigation) {
-    border-top: 2px solid $default-grey-color;
-    margin: 75px 0;
-    padding: 75px 0;
-}
-section > h2 {
-    margin-bottom: 75px;
-    text-align: center;
-
 }
 
 // Dribbble feed portfolio
@@ -221,6 +226,7 @@ section > h2 {
         border-bottom: 2px solid $default-grey-color;
         color: $default-grey-color;
         outline: none;
+        width: 100%;
     }
     textarea {
         resize: none;
@@ -229,4 +235,42 @@ section > h2 {
 }
 .social-platform {
     font-size: 42px;
+}
+
+
+
+// Make some responsive sh**
+@media (max-width: $screen-md-min){
+  a {
+    font-size: 22px;
+    letter-spacing: .1em;
+  }
+  section:not(.hero):not(.top-navigation) {
+    margin: 25px 0;
+    padding: 25px 0;
+  }
+  section > h2 {
+      margin-bottom: 25px;
+      text-align: center;
+  }
+  .hero {
+    margin-top: 100px;
+    padding: 50px 0 25px;
+  }
+  .top-navigation {
+    h3 {
+      text-align: center;
+    }
+    .navigation {
+      float: none;
+      text-align: center;
+      font-size: 20px;
+      li {
+        margin-left: 20px;
+        &:first-child{
+          margin-left: 0;
+        }
+      }
+    }
+  }
 }
