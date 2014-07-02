@@ -1,0 +1,232 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700);
+
+@import "../sass/bootstrap/bootstrap.scss";
+@import "../sass/fontawesome/scss/font-awesome.scss";
+// Default web variables
+
+$default-grey-color: #313131;
+$default-grey-color-inverted: #f1f1f1;
+$default-grey-color-rgba: rgba(49, 49, 49, .94);
+
+// Reset input placeholder
+
+::-webkit-input-placeholder {
+    color: $default-grey-color;
+    font-size: 22px;
+}
+::-moz-placeholder {
+    color: $default-grey-color;
+    font-size: 22px;
+}
+:-ms-input-placeholder {
+    color: $default-grey-color;
+    font-size: 22px;
+}
+input:-moz-placeholder {
+    color: $default-grey-color;
+    font-size: 22px;
+}
+
+// Typo
+
+
+body {
+    font: 700 32px/1.5em 'Josefin Sans', sans-serif;
+    color: $default-grey-color;
+    letter-spacing: .15em;
+}
+h1,h2,h3,p,a,span {
+    font-weight: bold;
+}
+h1 {
+    font-size: 58px;
+    letter-spacing: .15em;
+}
+h2 {
+    font-size: 42px;
+}
+a {
+    color: $default-grey-color;
+    font-weight: bold;
+    &:hover,
+    &.current:not(.logo) {
+        color: $default-grey-color;
+        border-bottom: 2px solid $default-grey-color;
+        background-color: none !important;
+        text-decoration: none;
+    }
+}
+a.inverted {
+    color: $default-grey-color-inverted;
+    font-weight: bold;
+    &:hover {
+        color: $default-grey-color-inverted;
+        border-bottom: 2px solid $default-grey-color-inverted;
+        background-color: none !important;
+        text-decoration: none;
+    }
+}
+.btn {
+    font-size: 22px;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 5px 40px;
+    border-radius: 0;
+    border: none;
+    text-transform: uppercase;
+}
+.btn-primary {
+    background: $default-grey-color;
+    color: white;
+    &:hover {
+        background: none;
+        box-shadow: inset 0 0 0 2px $default-grey-color;
+        color: $default-grey-color;
+    }
+}
+
+// Header
+// Navigation
+.top-navigation {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,.9);
+    z-index: 1;
+}
+.navigation {
+    float: right;
+    margin: 20px 0 10px 0;
+    text-align: right;
+    li {
+        display: inline-block;
+        margin-left: 50px;
+        a {
+            color: $default-grey-color;
+            font-weight: bold;
+            font-size: 24px;
+            &:hover {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+        &:hover,
+        &.active{
+            a {
+                background-color: none;
+                border-bottom: 2px solid $default-grey-color;
+            }
+        }
+    }
+}
+
+// Hero
+.hero {
+    margin-top: 80px;
+    padding: 150px 0 75px 0;
+}
+
+section:not(.hero):not(.top-navigation) {
+    border-top: 2px solid $default-grey-color;
+    margin: 75px 0;
+    padding: 75px 0;
+}
+section > h2 {
+    margin-bottom: 75px;
+    text-align: center;
+
+}
+
+// Dribbble feed portfolio
+
+.dribbble-portfolio {}
+.dribbble-portfolio--item {
+    margin-bottom: 30px;
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    a {
+        display: block;
+    }
+    a:hover {
+        border: 0;
+    }
+    &:hover .details {
+        opacity: 1;
+    }
+}
+.details {
+
+    cursor: crosshair;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    -ms-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+    
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    padding: 10px 30px;
+    color: white;
+    background: $default-grey-color-rgba;
+    .shot-meta {
+        position: absolute;
+        bottom: 1em;
+    }
+    p {
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 1em;
+    }
+    h2 {
+        font-size: 26px;
+    }
+    i {
+        font-size: 12px;
+        margin-left: 15px;
+    }
+    i:first-child {
+        margin-left: 0;
+    }
+}
+
+// Posts
+
+.list-group-item {
+    border: 0;
+    .meta {
+        font-family: "Myriad Pro", "Josefin Sans", sans-serif;
+        font-size: 22px;
+        color: #9a9a9a;
+        padding-left: 10px;
+    }
+}
+
+// Contact
+
+.contact {
+    textarea,
+    input {
+        margin-bottom: 30px;
+        border: 0;
+        box-shadow: 0;
+        border-bottom: 2px solid $default-grey-color;
+        color: $default-grey-color;
+        outline: none;
+    }
+    textarea {
+        resize: none;
+        height: 200px;
+    }
+}
+.social-platform {
+    font-size: 42px;
+}
