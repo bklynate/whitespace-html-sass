@@ -58,7 +58,7 @@ $(document).ready(function(){
         html += '</p></div></div>';
     });
 
-     //$('.dribbble-portfolio').html(html);
+     $('.dribbble-portfolio').html(html);
   };
 
   //$.jribbble.getShotsByList('popular', callback, {page: 1, per_page: 20});
