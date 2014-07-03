@@ -61,10 +61,10 @@ $(document).ready(function(){
      $('.dribbble-portfolio').html(html);
   };
 
-  $.jribbble.getShotsByList('popular', callback, {page: 1, per_page: 20});
+  //$.jribbble.getShotsByList('popular', callback, {page: 1, per_page: 20});
 
   // Or fetch from user
   // Replace 'ryanhopkins' username with yours
-  //$.jribbble.getShotsByPlayerId('ryanhopkins', callback, {page: 1, per_page: 8});
+  $.jribbble.getShotsByPlayerId('ryanhopkins', callback, {page: 1, per_page: 8});
 
 });
